@@ -1,8 +1,11 @@
 function getElementWidth(content, padding, border) {
-    return content + padding * 2 + border * 2;
+    const contentWidht = Number.parseFloat(content);
+    const paddingWidht = Number.parseFloat(padding);
+    const borderWidht = Number.parseFloat(border);
+    return contentWidht + paddingWidht * 2 + borderWidht * 2;
 }
 
 // Для перевірки роботи функції
-console.log(getElementWidth(Number.parseFloat("50px"), Number.parseFloat("8px"), Number.parseFloat("4px"))); // 74
-console.log(getElementWidth(Number.parseFloat("60px"), Number.parseFloat("12px"), Number.parseFloat("8.5px"))); // 101
-console.log(getElementWidth(Number.parseFloat("200px"), Number.parseFloat("0px"), Number.parseFloat("0px"))); // 200
+console.log(getElementWidth("50px", "8px", "4px")); // 74
+console.log(getElementWidth("60px", "12px", "8.5px")); // 101
+console.log(getElementWidth("200px", "0px", "0px")); // 200
